@@ -1,0 +1,27 @@
+{
+  "name": "kerneldesign",
+  "image": "kerneldesign",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "jupyter.jupyterServerType": "local"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "containerEnv": {
+    "TF_FORCE_GPU_ALLOW_GROWTH": "true"
+  },
+  "runArgs": [
+    "--gpus=all"
+  ],
+  "remoteUser": "root",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ]
+}
